@@ -4,38 +4,32 @@
 
 <head>
   <title>And Chill</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
   <div class="container">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Swipe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./html/matches.html">My Matches</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <!-- logo and app name -->
-    <div class="row1">
-      <img id="logo">
-      <h2 id="andChill">And Chill</h2>
-    </div>
-    <!-- card with movie poster -->
-    <div class="row2">
-      <div class="card" style="width: 18rem;">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/910VekmDZ5L._AC_SY741_.jpg" class="card-img-top"
-          alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Movie title</h5>
-          <p class="card-text">This could either be a description of the movie or the movie rating or run time. whatever
-            we want it to be.</p>
-          <a href="#no" class="btn btn-primary">No</a>
-          <a href="#yes" class="btn btn-primary">Yes</a>
+    <div class="card" id="mainCard">
+      <img src="assets/images/epicouch.png" alt="andChill" id="logo">
+      <div class="row2">
+        <div class="card" id="innerCard">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/910VekmDZ5L._AC_SY741_.jpg" class="card-img-top"
+            alt="..." id="poster">
+          <div class="card-body" id="">
+            <h5 class="card-title">Movie title</h5>
+            <p class="card-text">This could either be a description of the movie or the movie rating or run time.
+              whatever
+              we want it to be.</p>
+            <div id="button-div">
+              <button id="no" class="btn btn-danger">No💔</button>
+              <button id="yes" class="btn btn-primary">Yes🍆</button>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 </body>
