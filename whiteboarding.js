@@ -38,3 +38,17 @@ movies{
 randomMovie(){
   //send random movie title to api call, maybe doesn't need to be random?
 }
+
+// This will allow 2 users each the chance to choose which movies they would want to watch,
+// and which movies they would not want to watch, based on the movies available on selected streaming services.
+// If they have both chosen the same movie they do want to watch, 
+// they will get a "Match" (yes, it's Tinder for movies) 
+// in an attempt to cut out the dreaded "What do you feel like watching?"   
+
+
+
+//function to compare the two users
+//
+//
+//
+//
