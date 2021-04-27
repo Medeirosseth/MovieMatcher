@@ -18,10 +18,16 @@ function switchUser() {
 }
 
 function getElements(response) {
-  console.log(response);
-  $("#showPoster").html(
-    `<img src="https://image.tmdb.org/t/p/w500/${response.results[0].poster_path}"/>`
+  console.log("response: ", response);
+  $("#movieTitle").text(response.results[0].original_title);
+  $("#movieOverview").text(response.results[0].overview);
+  console.log(
+    "this is supposed to read the movie title --->",
+    response.results[0].original_title
   );
+
+  // .html(
+  //   `<img src="https://image.tmdb.org/t/p/w500/${response.results[0].poster_path}"/>`
 }
 
 $(document).ready(function () {
@@ -48,9 +54,10 @@ $(document).ready(function () {
     currentMovie = currentUser.movieArray[0];
     currentUser.moviesLiked.push(currentMovie);
     currentUser.movieArray.shift();
-    console.log(currentUser.moviesLiked);
+    // console.log(currentUser.moviesLiked);
     MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
       getElements(response);
+      console.log(response);
     });
   });
   $("#no").click(function () {
