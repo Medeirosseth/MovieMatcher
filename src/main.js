@@ -9,8 +9,6 @@ let user1;
 let user2;
 let currentUser;
 
-
-
 function switchUser() {
   if (currentUser.userName === "user1") {
     currentUser = user2;
@@ -19,31 +17,20 @@ function switchUser() {
   }
 }
 
+function getElements(response) {
+  // console.log(response);
+  $("#showPoster").html(`<img src="https://image.tmdb.org/t/p/w500/${response.results[0].poster_path}"/>`);
+}
+
 function compareMovies() {
   let matchArray = [];
   user1.moviesLiked.forEach(function (element) {
     if (user2.moviesLiked.includes(element)) {
-      matchArray.push(element)
-      console.log(matchArray)
+      matchArray.push(element);
     }
-
-  })
+  });
+  console.log(matchArray);
 }
-
-
-
-
-//     for (let i = 0; i < user2.moviesLiked.length - 1; i++) {
-//       if (user2.moviesLiked.includes(element)) {
-//       }
-//     }
-//   });
-// }
-
-
-
-
-
 
 // function compareMovies(thing1, thing2) {
 //   let matchArray = []
@@ -57,14 +44,6 @@ function compareMovies() {
 //   return matchArray;
 // }
 
-
-
-
-function getElements(response) {
-  // console.log(response);
-  $("#showPoster").html(`<img src="https://image.tmdb.org/t/p/w500/${response.results[0].poster_path}"/>`);
-}
-
 $(document).ready(function () {
   user1 = new User("user1");
   user2 = new User("user2");
@@ -75,7 +54,6 @@ $(document).ready(function () {
     .then(function (response) {
       getElements(response);
     });
-
 
   $("#yes").click(function () {
     currentMovie = currentUser.movieArray[0];
@@ -101,3 +79,10 @@ $(document).ready(function () {
     switchUser();
   });
 });
+
+
+
+
+
+
+
