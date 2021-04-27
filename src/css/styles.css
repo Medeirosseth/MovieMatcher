@@ -7,7 +7,7 @@
   background-color: lightgray;
 }
 #innerCard {
-  margin:auto;
+  margin: auto;
   width: 75%;
 }
 
@@ -23,8 +23,20 @@ body {
   margin-bottom: 15px;
 }
 
-#button-div{
+#button-div {
   margin: auto;
   width: 35%;
   display: block;
+}
+
+#showMovies {
+  display: none;
+}
+
+.btn {
+  background-color: white;
+}
+
+label {
+  color: white;
 }
