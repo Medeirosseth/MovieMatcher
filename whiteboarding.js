@@ -1,5 +1,5 @@
 //MVP
-// getting two users to match based on options chosen 
+// getting two users to match based on options chosen
 //Compile list of available streaming services
 //Gather movies available from streaming services API
 //Get movie information from imdb/rotten tomatoes API
@@ -11,41 +11,19 @@
 //Stretch: be able to select which streaming service to choose from
 //
 // MONDAY:
-// Decide on API 
+// Decide on API
 //
 //https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg
 
 //poster: hobbs and shaw https://image.tmdb.org/t/p/w500/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg
 
-
-user1 {
-  likedMovies: []
-}
-user2 {
-  likedMovies: []
-}
-matches {
-  matchedMovies: []
-}
-
-apicall${ movieTitle }
-return poster.jpg
-
-movies{
-  movieTitles: []
-}
-
-randomMovie(){
-  //send random movie title to api call, maybe doesn't need to be random?
-}
+//
 
 // This will allow 2 users each the chance to choose which movies they would want to watch,
 // and which movies they would not want to watch, based on the movies available on selected streaming services.
-// If they have both chosen the same movie they do want to watch, 
-// they will get a "Match" (yes, it's Tinder for movies) 
-// in an attempt to cut out the dreaded "What do you feel like watching?"   
-
-
+// If they have both chosen the same movie they do want to watch,
+// they will get a "Match" (yes, it's Tinder for movies)
+// in an attempt to cut out the dreaded "What do you feel like watching?"
 
 //function to compare the two users
 //
