@@ -7,8 +7,13 @@
 //If movie gets a like from user1 and user2, movie is moved into object/array
 //Display movies liked by both user1 and user2
 //Display "Match" to user if same movie liked
+
+
 //Stretch: be able to organize options by genre
 //Stretch: be able to select which streaming service to choose from
+//Stretch: add a button display the trailer for the movie.
+
+
 //
 // MONDAY:
 // Decide on API 
@@ -16,6 +21,13 @@
 //https://image.tmdb.org/t/p/w500/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg
 
 //poster: hobbs and shaw https://image.tmdb.org/t/p/w500/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg
+
+//tuesday:
+// 1.click listener for yes button that also pushes movie info to user array
+// 2. be able to switch users , and make sure both users start with the whole movieArray
+// 3. sign up splash page (form)
+// 4. function that compares two users liked arrays 
+// 3. beer
 
 
 user1 {

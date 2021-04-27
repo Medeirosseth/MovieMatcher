@@ -6,18 +6,18 @@ import MovieService from "./js/api.js";
 import User from "./js/user.js";
 
 let user1;
-// let user2;
+let user2;
 let currentUser;
 
 
 
-// function switchUser() {
-//   if (currentUser.userName === "user1") {
-//     currentUser = user2;
-//   } else {
-//     currentUser = user1;
-//   }
-// }
+function switchUser() {
+  if (currentUser.userName === "user1") {
+    currentUser = user2;
+  } else {
+    currentUser = user1;
+  }
+}
 
 
 function getElements(response) {
@@ -27,7 +27,7 @@ function getElements(response) {
 
 $(document).ready(function () {
   user1 = new User("user1");
-  // user2 = new User(userName);
+  user2 = new User("user2");
   currentUser = user1;
   let currentMovie = currentUser.movieArray[0];
   console.log(currentUser.movieArray);
@@ -53,5 +53,9 @@ $(document).ready(function () {
       .then(function (response) {
         getElements(response);
       });
+  });
+
+  $("#switch").click(function () {
+    switchUser();
   });
 });
