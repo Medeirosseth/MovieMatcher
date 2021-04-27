@@ -21,14 +21,12 @@ function getElements(response) {
   console.log("response: ", response);
   $("#movieTitle").text(response.results[0].original_title);
   $("#movieOverview").text(response.results[0].overview);
-  console.log(
-    "this is supposed to read the movie title --->",
-    response.results[0].original_title
+  $("#moviePoster").html(
+    `<img src="https://image.tmdb.org/t/p/w500${response.results[0].poster_path}"/>`
   );
-
-  // .html(
-  //   `<img src="https://image.tmdb.org/t/p/w500/${response.results[0].poster_path}"/>`
 }
+
+// .html(`<img src="https://image.tmdb.org/t/p/w500${response.results[0].poster_path}"/>`)
 
 $(document).ready(function () {
   user1 = new User("user1");
