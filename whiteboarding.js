@@ -28,6 +28,8 @@
 // 2. be able to switch users , and make sure both users start with the whole movieArray
 // 3. sign up splash page (form)
 // 4. function that compares two users liked arrays 
+// 5. figure what happens at the end of the array
+// 6. add posters 
 // 3. beer
 
 
@@ -64,6 +66,6 @@ randomMovie(){
 //
 //
 //tuesday:
-// 1.click listener for yes button that also pushes movie info to user array
+// 1. click listener for yes button that also pushes movie info to user array
 // 2. be able to switch users , and make sure both users start with the whole movieArray
-// 3. beer
+// 3. 

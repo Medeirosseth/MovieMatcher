@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>And Chill</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
+  <body>
+    <button id="switch" class="btn btn-warning">Switch User🤳🏽</button>
+    <div class="userInput">
+      <div class="container">
+        <img src="assets/images/epicouch.png" alt="andChill" id="logo" />
+        <form id="inputForm">
+          <label for="userName">Enter Name</label>
+          <input
+            type="text"
+            id="userNameInput"
+            placeholder="Enter name"
+            required
+          />
+          <button type="submit" id="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
 
-<head>
-  <title>And Chill</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-
-<body>
-  <div class="container">
-    <div class="card" id="mainCard">
-      <img src="assets/images/epicouch.png" alt="andChill" id="logo">
-      <div class="row2">
-        <div class="card" id="innerCard">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/910VekmDZ5L._AC_SY741_.jpg" class="card-img-top"
-            alt="..." id="poster">
-          <div class="card-body" id="">
-            <h5 class="card-title">Movie title</h5>
-            <p class="card-text">This could either be a description of the movie or the movie rating or run time.
-              whatever
-              we want it to be.</p>
-            <div id="button-div">
-              <button id="no" class="btn btn-danger">No💔</button>
-              <button id="yes" class="btn btn-primary">Yes😎</button>
-              <button id="switch" class="btn btn-warning">Switch User🤳🏽</button>
+    <div id="showMovies">
+      <div class="container">
+        <div class="card" id="mainCard">
+          <img src="assets/images/epicouch.png" alt="andChill" id="logo" />
+          <div class="row2">
+            <div class="card" id="innerCard">
+              <p id="moviePoster"></p>
+              <div class="card-body" id="">
+                <h5 class="card-title" id="movieTitle"></h5>
+                <p class="card-text" id="movieOverview"></p>
+                <div id="button-div">
+                  <button id="no" class="btn btn-danger">No💔</button>
+                  <button id="yes" class="btn btn-primary">Yes😎</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
+</html>
