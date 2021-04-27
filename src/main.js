@@ -40,6 +40,7 @@ function compareMovies(currentMovie) {
       }
     });
   }
+  console.log(user1, user2);
 }
 
 $(document).ready(function () {
@@ -73,6 +74,7 @@ $(document).ready(function () {
 
   $("#switch").click(function () {
     switchUser();
+    console.log(currentUser);
   });
 });
 
