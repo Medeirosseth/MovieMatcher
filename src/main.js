@@ -8,7 +8,6 @@ import User from "./js/user.js";
 let user1;
 let user2;
 let currentUser;
-// let currentMovie;
 
 function switchUser() {
   if (currentUser.userName === "user1") {
@@ -31,13 +30,13 @@ function compareMovies(currentMovie) {
   if (currentUser.userName === "user1") {
     user2.moviesLiked.forEach(function (element) {
       if (currentMovie.includes(element)) {
-        alert("match");
+        alert("It's a match!");
       }
     });
   } else {
     user1.moviesLiked.forEach(function (element) {
       if (element.includes(currentMovie)) {
-        alert("match");
+        alert("It's a match!");
       }
     });
   }
