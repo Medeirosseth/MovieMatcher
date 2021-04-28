@@ -45,7 +45,6 @@ function compareMovies(currentMovie) {
       }
     });
   }
-  console.log(user1, user2);
 }
 
 $(document).ready(function () {
@@ -59,7 +58,6 @@ $(document).ready(function () {
     .then(function (response) {
       getElements(response);
     });
-
 
   $("#inputForm").submit(function (event) {
     event.preventDefault();
@@ -102,6 +100,7 @@ $(document).ready(function () {
     $(".userInput").slideToggle();
   });
 });
+
 
 
 
