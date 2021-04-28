@@ -98,3 +98,9 @@ li {
   color: white;
   text-align: center;
 }
+
+#trailer {
+  margin: auto;
+  width: 100%;
+  display: block;
+}

@@ -16,4 +16,12 @@ export default class User {
     ];
     this.moviesLiked = [];
   }
+
+  // getArray(response) {
+  //   let nameArray = [];
+  //   for (let i = 0; i < response.results.length; i++) {
+  //     nameArray.push(response.results[i].title);
+  //   }
+  //   this.movieArray = nameArray;
+  // }
 }
