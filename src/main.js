@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import MovieService from "./js/api.js";
 import User from "./js/user.js";
+import PopulateMovies from "./js/originalMovie.js";
 
 let user1;
 let user2;
@@ -26,30 +27,6 @@ function getElements(response) {
   );
 }
 
-function returnMatches() {
-  const match = user1.moviesLiked.filter(element => user2.moviesLiked.includes(element));
-  // let moviesInCommon =
-  console.log('matched movies between both users--->', match);
-
-  return match;
-}
-
-// match.forEach(function (element) {
-
-// })
-
-
-// function displayContactDetails(addressBookToDisplay) {
-//   let contactsList = $("ul#contacts");
-//   let htmlForContactInfo = "";
-//   Object.keys(addressBookToDisplay.contacts).forEach(function(key) {
-//     const contact = addressBookToDisplay.findContact(key);
-//     htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
-//   });
-//   contactsList.html(htmlForContactInfo);
-// };
-
-
 function compareMovies(currentMovie) {
   if (currentUser.userID === 1) {
     user2.moviesLiked.forEach(function (element) {
@@ -68,6 +45,9 @@ function compareMovies(currentMovie) {
 
 
 
+
+
+
 // function changeMovie(){
 //   currentMovie = currentUser.movieArray[0];
 //   MovieService.getMovieInfoAPI(currentMovie)
@@ -75,8 +55,25 @@ function compareMovies(currentMovie) {
 //       getElements(response);
 //     });
 // }
+function getArray(response) {
+  let array = [];
+  let nameArray = [];
+  response.results.forEach(function (element) {
+    array.push(element);
+  });
+  for (let i = 0; i < array.length; i++) {
+    nameArray.push(array[i].title);
+  }
+  console.log(array);
+  console.log(nameArray);
+}
 
 $(document).ready(function () {
+  PopulateMovies.populateArray()
+    .then(function (response) {
+      getArray(response);
+    });
+
   user1 = new User("user1");
   user1.userID = 1;
   user2 = new User("user2");
@@ -130,7 +127,7 @@ $(document).ready(function () {
   });
 
   $("#show-matches").click(function () {
-    returnMatches();
+    // returnMatches();
     $("#showMovies").toggle();
 
 
