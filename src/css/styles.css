@@ -82,3 +82,19 @@ body {
   display: block;
   margin-bottom: 5vh;
 }
+
+#showMoviesInCommon {
+  display: none;
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+ul,
+li {
+  color: white;
+}
+
+#name-place {
+  color: white;
+  text-align: center;
+}

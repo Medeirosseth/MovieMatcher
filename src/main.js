@@ -27,17 +27,22 @@ function getElements(response) {
 }
 
 function returnMatches() {
-  const match = user1.moviesLiked.filter(element => user2.moviesLiked.includes(element));
-  // let moviesInCommon =
-  console.log('matched movies between both users--->', match);
+  const match = user1.moviesLiked.filter((element) =>
+    user2.moviesLiked.includes(element)
+  );
 
+  match.forEach(function (element) {
+    $("#name-place").text(
+      `${user1.userName} matched these movies with ${user2.userName}`
+    );
+    $("#ulMatches").append(`<li>${element}</li>`);
+    console.log("this is the element in the function" + element);
+  });
+  console.log("matched movies between both users--->", match);
   return match;
 }
 
-// match.forEach(function (element) {
-
-// })
-
+//match.forEach(function (element) {});
 
 // function displayContactDetails(addressBookToDisplay) {
 //   let contactsList = $("ul#contacts");
@@ -48,7 +53,6 @@ function returnMatches() {
 //   });
 //   contactsList.html(htmlForContactInfo);
 // };
-
 
 function compareMovies(currentMovie) {
   if (currentUser.userID === 1) {
@@ -66,8 +70,6 @@ function compareMovies(currentMovie) {
   }
 }
 
-
-
 // function changeMovie(){
 //   currentMovie = currentUser.movieArray[0];
 //   MovieService.getMovieInfoAPI(currentMovie)
@@ -83,10 +85,9 @@ $(document).ready(function () {
   user2.userID = 2;
   currentUser = user1;
   let currentMovie = currentUser.movieArray[0];
-  MovieService.getMovieInfoAPI(currentMovie)
-    .then(function (response) {
-      getElements(response);
-    });
+  MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
+    getElements(response);
+  });
 
   $("#inputForm").submit(function (event) {
     event.preventDefault();
@@ -102,45 +103,33 @@ $(document).ready(function () {
     compareMovies(currentMovie);
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie)
-      .then(function (response) {
-        getElements(response);
-      });
+    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
+      getElements(response);
+    });
   });
 
   $("#no").click(function () {
     // let currentMovie = currentUser.movieArray[0];
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie)
-      .then(function (response) {
-        getElements(response);
-      });
+    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
+      getElements(response);
+    });
   });
 
   $("#switch").click(function () {
     switchUser();
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie)
-      .then(function (response) {
-        getElements(response);
-      });
+    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
+      getElements(response);
+    });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
   });
 
   $("#show-matches").click(function () {
     returnMatches();
-    $("#showMovies").toggle();
-
-
-
+    $("#showMovies").slideUp();
+    $("#showMoviesInCommon").fadeIn();
   });
 });
-
-
-
-
-
-
-

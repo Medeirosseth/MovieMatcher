@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>And Chill</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <title>And Chill</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-  <div class="userInput">
-    <div class="container">
-      <img src="assets/images/epicouch.png" style="margin-top: 5vh" alt="andChill" id="logo" />
-      <form id="inputForm">
-        <h3 id="nameText">Enter your login information:</h3>
-        <input type="text" id="userNameInput" placeholder="Enter name" required />
-        <button type="submit" id="submit" class="btn">Submit</button>
-      </form>
+  <body>
+    <div class="userInput">
+      <div class="container">
+        <img
+          src="assets/images/epicouch.png"
+          style="margin-top: 5vh"
+          alt="andChill"
+          id="logo"
+        />
+        <form id="inputForm">
+          <h3 id="nameText">Enter your login information:</h3>
+          <input
+            type="text"
+            id="userNameInput"
+            placeholder="Enter name"
+            required
+          />
+          <button type="submit" id="submit" class="btn">Submit</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div id="showMovies">
-    <div class="container">
-      <div class="card" id="mainCard">
-        <img src="assets/images/epicouch.png" alt="andChill" id="logo" />
-        <div class="row2">
-          <div class="card" id="innerCard">
-            <p id="moviePoster"></p>
-            <div class="card-body" id="">
-              <h5 class="card-title" id="movieTitle"></h5>
-              <hr style="width: 75%;">
-              <p class="card-text" id="movieOverview"></p>
-              <div id="button-div">
-                <button id="no" class="btn btn-danger">No💔</button>
-                <button id="yes" class="btn btn-primary">Yes😎</button>
+    <div id="showMovies">
+      <div class="container">
+        <div class="card" id="mainCard">
+          <img src="assets/images/epicouch.png" alt="andChill" id="logo" />
+          <div class="row2">
+            <div class="card" id="innerCard">
+              <p id="moviePoster"></p>
+              <div class="card-body" id="">
+                <h5 class="card-title" id="movieTitle"></h5>
+                <hr style="width: 75%" />
+                <p class="card-text" id="movieOverview"></p>
+                <div id="button-div">
+                  <button id="no" class="btn btn-danger">No💔</button>
+                  <button id="yes" class="btn btn-primary">Yes😎</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <button id="switch" class="btn btn-warning">Switch User🤳🏽</button>
+      <button id="show-matches" class="btn btn-danger">Show Matches👑</button>
     </div>
-    <button id="switch" class="btn btn-warning">Switch User🤳🏽</button>
-    <button id='show-matches' class="btn btn-danger">Show Matches👑</button>
-    <div>
-      <ul id="appendMatches">
-        <li id="movieMatchList"></li>
-      </ul>
+    <h1 id="name-place"></h1>
+    <div id="showMoviesInCommon">
+      <iframe
+        src="https://giphy.com/embed/iXWjfLH2L6gZW"
+        width="480"
+        height="199"
+        frameborder="0"
+        class="giphy-embed"
+        allowfullscreen
+      ></iframe>
+      <p>
+        <a
+          href="https://giphy.com/gifs/paul-walker-furious-7-fast-and-the-iXWjfLH2L6gZW"
+        ></a>
+      </p>
+      <ul id="ulMatches"></ul>
     </div>
-</body>
-
+  </body>
 </html>
