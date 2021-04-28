@@ -27,7 +27,7 @@ function getElements(response) {
   );
 }
 
-function returnMatches() {
+function returnMatches(user1, user2) {
   const match = user1.moviesLiked.filter((element) =>
     user2.moviesLiked.includes(element)
   );
@@ -73,25 +73,23 @@ $(document).ready(function () {
   currentUser = user1;
   let currentMovie = currentUser.movieArray[0];
   let yttrailer;
-  MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
-    getElements(response);
-    let movieJsonID = response.results[0].id; //new
-    TrailerService.getTrailerApi(movieJsonID).then(function (trailerresponse) {
-      yttrailer = trailerresponse.results[0].key;
-      youTubeConcat(yttrailer);
-    });
-  });
 
   $("#inputForm").submit(function (event) {
     event.preventDefault();
     currentUser.userName = $("#userNameInput").val();
     youTubeConcat(yttrailer);
-    console.log("look ->", yttrailer);
     $("#userNameInput").val("");
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
-      getElements(response);
-    });
+    MovieService.getMovieInfoAPI(currentMovie)
+      .then(function (response) {
+        getElements(response);
+        let movieJsonID = response.results[0].id;
+        TrailerService.getTrailerApi(movieJsonID)
+          .then(function (trailerresponse) {
+            let yttrailer = trailerresponse.results[0].key;
+            youTubeConcat(yttrailer);
+          });
+      });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
   });
@@ -101,33 +99,31 @@ $(document).ready(function () {
     compareMovies(currentMovie, user1, user2);
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
-      getElements(response);
-
-      let movieJsonID = response.results[0].id; //new
-      TrailerService.getTrailerApi(movieJsonID).then(function (
-        trailerresponse
-      ) {
-        yttrailer = trailerresponse.results[0].key;
-        youTubeConcat(yttrailer);
+    MovieService.getMovieInfoAPI(currentMovie)
+      .then(function (response) {
+        getElements(response);
+        let movieJsonID = response.results[0].id;
+        TrailerService.getTrailerApi(movieJsonID)
+          .then(function (trailerresponse) {
+            yttrailer = trailerresponse.results[0].key;
+            youTubeConcat(yttrailer);
+          });
       });
-    });
   });
 
   $("#no").click(function () {
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
-    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
-      getElements(response);
-
-      let movieJsonID = response.results[0].id; //new
-      TrailerService.getTrailerApi(movieJsonID).then(function (
-        trailerresponse
-      ) {
-        yttrailer = trailerresponse.results[0].key;
-        youTubeConcat(yttrailer);
+    MovieService.getMovieInfoAPI(currentMovie)
+      .then(function (response) {
+        getElements(response);
+        let movieJsonID = response.results[0].id;
+        TrailerService.getTrailerApi(movieJsonID)
+          .then(function (trailerresponse) {
+            yttrailer = trailerresponse.results[0].key;
+            youTubeConcat(yttrailer);
+          });
       });
-    });
   });
 
   $("#switch").click(function () {
@@ -135,22 +131,25 @@ $(document).ready(function () {
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
       getElements(response);
-
-      let movieJsonID = response.results[0].id; //new
-      TrailerService.getTrailerApi(movieJsonID).then(function (
-        trailerresponse
-      ) {
-        yttrailer = trailerresponse.results[0].key;
-        youTubeConcat(yttrailer);
-      });
+      let movieJsonID = response.results[0].id;
+      TrailerService.getTrailerApi(movieJsonID)
+        .then(function (trailerresponse) {
+          yttrailer = trailerresponse.results[0].key;
+          youTubeConcat(yttrailer);
+        });
     });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
   });
 
   $("#show-matches").click(function () {
-    returnMatches();
+    returnMatches(user1, user2);
     $("#showMovies").slideUp();
     $("#showMoviesInCommon").fadeIn();
   });
 });
+
+
+
+
+

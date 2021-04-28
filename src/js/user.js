@@ -13,4 +13,4 @@ export default class User {
     }
     this.movieArray = nameArray;
   }
-};
+}
