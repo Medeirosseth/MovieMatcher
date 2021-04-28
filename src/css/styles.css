@@ -29,9 +29,9 @@ body {
   display: block;
 }
 
-/* #showMovies {
+#showMovies {
   display: none;
-} */
+}
 
 .btn {
   background-color: white;
