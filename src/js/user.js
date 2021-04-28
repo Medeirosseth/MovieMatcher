@@ -13,18 +13,4 @@ export default class User {
     }
     this.movieArray = nameArray;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 290e5288cf23a48f50f16b2feac9c761182f498e
+};
