@@ -26,10 +26,13 @@ function getElements(response) {
   );
 }
 
-// function returnMatches() {
-//   const match = user1.moviesLiked.filter(element => user2.moviesLiked.includes(element));
-//   return match;
-// }
+function returnMatches() {
+  const match = user1.moviesLiked.filter(element => user2.moviesLiked.includes(element));
+  $("#").text(match)
+  console.log('matched movies between both users--->', match)
+  return match;
+}
+
 
 function compareMovies(currentMovie) {
   if (currentUser.userID === 1) {
@@ -46,6 +49,8 @@ function compareMovies(currentMovie) {
     });
   }
 }
+
+
 
 // function changeMovie(){
 //   currentMovie = currentUser.movieArray[0];
@@ -106,6 +111,10 @@ $(document).ready(function () {
       });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
+  });
+
+  $("#show-matches").click(function () {
+    returnMatches();
   });
 });
 
