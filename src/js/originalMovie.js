@@ -14,9 +14,3 @@ export default class PopulateMovies {
       });
   }
 }
-
-// response.results[0].title;
-
-// response.results.forEach(function () {
-//   console.log(Object.title);
-// });

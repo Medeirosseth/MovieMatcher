@@ -6,10 +6,7 @@ import MovieService from "./js/api.js";
 import User from "./js/user.js";
 import PopulateMovies from "./js/originalMovie.js";
 
-// let user1;
-// let user2;
 let currentUser;
-
 
 function switchUser(user1, user2) {
   if (currentUser.userID === 1) {
@@ -22,7 +19,6 @@ function switchUser(user1, user2) {
 }
 
 function getElements(response) {
-  // console.log(currentUser, user1, user2);
   $("#movieTitle").text(response.results[0].original_title);
   $("#movieOverview").text(response.results[0].overview);
   $("#moviePoster").html(
@@ -57,7 +53,6 @@ $(document).ready(function () {
   currentUser = user1;
   let currentMovie = currentUser.movieArray[0];
 
-
   $("#inputForm").submit(function (event) {
     event.preventDefault();
     currentUser.userName = $("#userNameInput").val();
@@ -72,7 +67,6 @@ $(document).ready(function () {
   });
 
   $("#yes").click(function () {
-    // let currentMovie = currentUser.movieArray[0];
     currentUser.moviesLiked.push(currentMovie);
     compareMovies(currentMovie, user1, user2);
     currentUser.movieArray.shift();
@@ -84,7 +78,6 @@ $(document).ready(function () {
   });
 
   $("#no").click(function () {
-    // let currentMovie = currentUser.movieArray[0];
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie)
@@ -102,7 +95,6 @@ $(document).ready(function () {
       });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
-    console.log(currentUser);
   });
 
   $("#show-matches").click(function () {
@@ -110,13 +102,3 @@ $(document).ready(function () {
     $("#showMovies").toggle();
   });
 });
-
-
-
-
-
-
-
-
-
-
