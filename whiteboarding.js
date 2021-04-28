@@ -30,7 +30,16 @@
 // 4. function that compares two users liked arrays 
 // 5. figure what happens at the end of the array
 // 6. add posters 
-// 3. beer
+
+// wednesday 
+// fix no button have it cycle to next array
+// switch user and have movie array start at the begininn
+// error handling for the end of the movie array 
+// display common matches 
+// fix yes button to push array and cycle through on first click 
+
+//thursday
+// how who what we present
 
 
 user1 {

@@ -3,7 +3,7 @@ export default class User {
     this.userID = userID;
     this.userName = userName;
     this.movieArray = [
-      "The Fast and the Furious",
+      "Tom and Jerry: Fast",
       "2 Fast 2 Furious",
       "The Fast and The Furious: Tokyo Drift",
       "Fast Furious 2009",
@@ -15,16 +15,5 @@ export default class User {
       "gone in 60 seconds",
     ];
     this.moviesLiked = [];
-    // this.userID = 0;
   }
 }
-
-// addUser() {
-//   userID = this.assignID();
-//   this.userID.push(user);
-// }
-
-// assignID() {
-//   this.userID += 1;
-//   return this.userID;
-// }
