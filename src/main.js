@@ -47,6 +47,14 @@ function compareMovies(currentMovie) {
   }
 }
 
+// function changeMovie(){
+//   currentMovie = currentUser.movieArray[0];
+//   MovieService.getMovieInfoAPI(currentMovie)
+//     .then(function (response) {
+//       getElements(response);
+//     });
+// }
+
 $(document).ready(function () {
   user1 = new User("user1");
   user1.userID = 1;
