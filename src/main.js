@@ -5,22 +5,21 @@ import "./css/styles.css";
 import MovieService from "./js/api.js";
 import User from "./js/user.js";
 import TrailerService from "./js/trailerApi.js";
+import PopulateMovies from "./js/originalMovie.js";
 
-let user1;
-let user2;
 let currentUser;
-//let yttrailer;
 
-function switchUser() {
+function switchUser(user1, user2) {
   if (currentUser.userID === 1) {
     currentUser = user2;
+    return currentUser;
   } else {
     currentUser = user1;
+    return currentUser;
   }
 }
 
 function getElements(response) {
-  console.log(currentUser, user1, user2);
   $("#movieTitle").text(response.results[0].original_title);
   $("#movieOverview").text(response.results[0].overview);
   $("#moviePoster").html(
@@ -39,11 +38,10 @@ function returnMatches() {
     );
     $("#ulMatches").append(`<li>${element}</li>`);
   });
-
   return match;
 }
 
-function compareMovies(currentMovie) {
+function compareMovies(currentMovie, user1, user2) {
   if (currentUser.userID === 1) {
     user2.moviesLiked.forEach(function (element) {
       if (currentMovie.includes(element)) {
@@ -66,13 +64,15 @@ function youTubeConcat(yttrailer) {
 }
 
 $(document).ready(function () {
-  user1 = new User("user1");
-  user1.userID = 1;
-  user2 = new User("user2");
-  user2.userID = 2;
+  let user1 = new User(1, "user1");
+  let user2 = new User(2, "user2");
+  PopulateMovies.apiArray().then(function (response) {
+    user1.getArray(response);
+    user2.getArray(response);
+  });
   currentUser = user1;
-  let yttrailer;
   let currentMovie = currentUser.movieArray[0];
+  let yttrailer;
   MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
     getElements(response);
     let movieJsonID = response.results[0].id; //new
@@ -88,18 +88,17 @@ $(document).ready(function () {
     youTubeConcat(yttrailer);
     console.log("look ->", yttrailer);
     $("#userNameInput").val("");
+    currentMovie = currentUser.movieArray[0];
+    MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
+      getElements(response);
+    });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
   });
 
-  // function youTubeConcat(yttrailer) {
-  //   $("#youtube-place").html(`https://www.youtube.com/watch?v=${yttrailer}`);
-  // }
-
   $("#yes").click(function () {
-    // let currentMovie = currentUser.movieArray[0];
     currentUser.moviesLiked.push(currentMovie);
-    compareMovies(currentMovie);
+    compareMovies(currentMovie, user1, user2);
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
@@ -116,7 +115,6 @@ $(document).ready(function () {
   });
 
   $("#no").click(function () {
-    // let currentMovie = currentUser.movieArray[0];
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
@@ -133,7 +131,7 @@ $(document).ready(function () {
   });
 
   $("#switch").click(function () {
-    switchUser();
+    switchUser(user1, user2);
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie).then(function (response) {
       getElements(response);

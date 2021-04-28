@@ -2,26 +2,29 @@ export default class User {
   constructor(userID, userName) {
     this.userID = userID;
     this.userName = userName;
-    this.movieArray = [
-      "Tom and Jerry: Fast",
-      "2 Fast 2 Furious",
-      "The Fast and The Furious: Tokyo Drift",
-      "Fast Furious 2009",
-      "Fast Five",
-      "Fast and Furious 6",
-      "Furious 7",
-      "The Fate of the Furious",
-      "Fast and Furious Presents: Hobbs & Shaw",
-      "gone in 60 seconds",
-    ];
+    this.movieArray = [];
     this.moviesLiked = [];
   }
 
-  // getArray(response) {
-  //   let nameArray = [];
-  //   for (let i = 0; i < response.results.length; i++) {
-  //     nameArray.push(response.results[i].title);
-  //   }
-  //   this.movieArray = nameArray;
-  // }
+  getArray(response) {
+    let nameArray = [];
+    for (let i = 0; i < response.results.length; i++) {
+      nameArray.push(response.results[i].title);
+    }
+    this.movieArray = nameArray;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 290e5288cf23a48f50f16b2feac9c761182f498e
