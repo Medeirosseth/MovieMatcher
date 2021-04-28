@@ -6,21 +6,23 @@ import MovieService from "./js/api.js";
 import User from "./js/user.js";
 import PopulateMovies from "./js/originalMovie.js";
 
-let user1;
-let user2;
+// let user1;
+// let user2;
 let currentUser;
 
 
-function switchUser() {
+function switchUser(user1, user2) {
   if (currentUser.userID === 1) {
     currentUser = user2;
+    return currentUser;
   } else {
     currentUser = user1;
+    return currentUser;
   }
 }
 
 function getElements(response) {
-  console.log(currentUser, user1, user2);
+  // console.log(currentUser, user1, user2);
   $("#movieTitle").text(response.results[0].original_title);
   $("#movieOverview").text(response.results[0].overview);
   $("#moviePoster").html(
@@ -28,7 +30,7 @@ function getElements(response) {
   );
 }
 
-function compareMovies(currentMovie) {
+function compareMovies(currentMovie, user1, user2) {
   if (currentUser.userID === 1) {
     user2.moviesLiked.forEach(function (element) {
       if (currentMovie.includes(element)) {
@@ -43,43 +45,28 @@ function compareMovies(currentMovie) {
     });
   }
 }
-// function changeMovie(){
-//   currentMovie = currentUser.movieArray[0];
-//   MovieService.getMovieInfoAPI(currentMovie)
-//     .then(function (response) {
-//       getElements(response);
-//     });
-// }
-
-
-
-
-
-
-
 
 $(document).ready(function () {
-  let user1 = new User(1);
-  let user2 = new User(2);
+  let user1 = new User(1, "user1");
+  let user2 = new User(2, "user2");
   PopulateMovies.apiArray()
     .then(function (response) {
       user1.getArray(response);
       user2.getArray(response);
     });
   currentUser = user1;
-
-
   let currentMovie = currentUser.movieArray[0];
-  console.log("current movie: ", user1, currentUser.movieArray);
-  MovieService.getMovieInfoAPI(currentMovie)
-    .then(function (response) {
-      getElements(response);
-    });
+
 
   $("#inputForm").submit(function (event) {
     event.preventDefault();
     currentUser.userName = $("#userNameInput").val();
     $("#userNameInput").val("");
+    currentMovie = currentUser.movieArray[0];
+    MovieService.getMovieInfoAPI(currentMovie)
+      .then(function (response) {
+        getElements(response);
+      });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
   });
@@ -87,7 +74,7 @@ $(document).ready(function () {
   $("#yes").click(function () {
     // let currentMovie = currentUser.movieArray[0];
     currentUser.moviesLiked.push(currentMovie);
-    compareMovies(currentMovie);
+    compareMovies(currentMovie, user1, user2);
     currentUser.movieArray.shift();
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie)
@@ -107,7 +94,7 @@ $(document).ready(function () {
   });
 
   $("#switch").click(function () {
-    switchUser();
+    switchUser(user1, user2);
     currentMovie = currentUser.movieArray[0];
     MovieService.getMovieInfoAPI(currentMovie)
       .then(function (response) {
@@ -115,6 +102,7 @@ $(document).ready(function () {
       });
     $("#showMovies").toggle();
     $(".userInput").slideToggle();
+    console.log(currentUser);
   });
 
   $("#show-matches").click(function () {
