@@ -28,10 +28,26 @@ function getElements(response) {
 
 function returnMatches() {
   const match = user1.moviesLiked.filter(element => user2.moviesLiked.includes(element));
-  $("#").text(match)
-  console.log('matched movies between both users--->', match)
+  // let moviesInCommon =
+  console.log('matched movies between both users--->', match);
+
   return match;
 }
+
+// match.forEach(function (element) {
+
+// })
+
+
+// function displayContactDetails(addressBookToDisplay) {
+//   let contactsList = $("ul#contacts");
+//   let htmlForContactInfo = "";
+//   Object.keys(addressBookToDisplay.contacts).forEach(function(key) {
+//     const contact = addressBookToDisplay.findContact(key);
+//     htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
+//   });
+//   contactsList.html(htmlForContactInfo);
+// };
 
 
 function compareMovies(currentMovie) {
@@ -115,6 +131,10 @@ $(document).ready(function () {
 
   $("#show-matches").click(function () {
     returnMatches();
+    $("#showMovies").toggle();
+
+
+
   });
 });
 

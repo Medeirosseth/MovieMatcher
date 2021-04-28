@@ -31,9 +31,9 @@ body {
 #showMovies {
   display: none;
 }
-.btn {
+/* .btn {
   background-color: white;
-}
+} */
 #switch {
   display: none;
   margin: auto;
@@ -47,6 +47,7 @@ body {
   width: 25%;
   margin-top: 10px;
   display: block;
+  background-color: white;
 }
 #submit:hover {
   background-color: blue;
@@ -74,6 +75,12 @@ body {
 }
 #movieTitle {
   text-align: center;
+}
+#show-matches {
+  margin: auto;
+  width: 15%;
+  display: block;
+  margin-bottom: 5vh;
 }
 
 
