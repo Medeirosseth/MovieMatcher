@@ -1,5 +1,5 @@
 export default class PopulateMovies {
-  static populateArray() {
+  static apiArray() {
     return fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`
     )

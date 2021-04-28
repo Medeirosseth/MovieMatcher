@@ -1,36 +1,34 @@
 export default class User {
-  constructor(userID, userName) {
+  constructor(userID) {
     this.userID = userID;
-    this.userName = userName;
-    this.movieArray = [
-      "Tom and Jerry: Fast",
-      "2 Fast 2 Furious",
-      "The Fast and The Furious: Tokyo Drift",
-      "Fast Furious 2009",
-      "Fast Five",
-      "Fast and Furious 6",
-      "Furious 7",
-      "The Fate of the Furious",
-      "Fast and Furious Presents: Hobbs & Shaw",
-      "gone in 60 seconds",
-    ];
+    this.userName = 0;
+    this.movieArray = [];
     this.moviesLiked = [];
-    // this.userID = 0;
   }
 
+  getArray(response) {
+    let nameArray = [];
+    for (let i = 0; i < response.results.length; i++) {
+      nameArray.push(response.results[i].title);
+    }
+    // console.log(nameArray);
+    this.movieArray = nameArray;
+  }
 
 
 }
 
+
+
+
+// this.userID = 0;
 // addUser() {
 //   userID = this.assignID();
 //   this.userID.push(user);
 // }
 
-// assignID() {
-//   this.userID += 1;
-//   return this.userID;
-// }
+
+
 
 
 

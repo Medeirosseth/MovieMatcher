@@ -10,6 +10,7 @@ let user1;
 let user2;
 let currentUser;
 
+
 function switchUser() {
   if (currentUser.userID === 1) {
     currentUser = user2;
@@ -42,12 +43,6 @@ function compareMovies(currentMovie) {
     });
   }
 }
-
-
-
-
-
-
 // function changeMovie(){
 //   currentMovie = currentUser.movieArray[0];
 //   MovieService.getMovieInfoAPI(currentMovie)
@@ -55,31 +50,27 @@ function compareMovies(currentMovie) {
 //       getElements(response);
 //     });
 // }
-function getArray(response) {
-  let array = [];
-  let nameArray = [];
-  response.results.forEach(function (element) {
-    array.push(element);
-  });
-  for (let i = 0; i < array.length; i++) {
-    nameArray.push(array[i].title);
-  }
-  console.log(array);
-  console.log(nameArray);
-}
+
+
+
+
+
+
+
 
 $(document).ready(function () {
-  PopulateMovies.populateArray()
+  let user1 = new User(1);
+  let user2 = new User(2);
+  PopulateMovies.apiArray()
     .then(function (response) {
-      getArray(response);
+      user1.getArray(response);
+      user2.getArray(response);
     });
-
-  user1 = new User("user1");
-  user1.userID = 1;
-  user2 = new User("user2");
-  user2.userID = 2;
   currentUser = user1;
+
+
   let currentMovie = currentUser.movieArray[0];
+  console.log("current movie: ", user1, currentUser.movieArray);
   MovieService.getMovieInfoAPI(currentMovie)
     .then(function (response) {
       getElements(response);
