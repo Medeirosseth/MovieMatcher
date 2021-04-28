@@ -108,11 +108,11 @@ $(document).ready(function () {
   $("#show-matches").click(function () {
     // returnMatches();
     $("#showMovies").toggle();
-
-
-
   });
 });
+
+
+
 
 
 
