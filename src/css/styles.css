@@ -29,7 +29,7 @@ body {
   display: block;
 }
 #showMovies {
-  /* display: none; */
+  display: none;
 }
 .btn {
   background-color: white;
