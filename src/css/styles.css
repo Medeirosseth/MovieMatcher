@@ -1,16 +1,17 @@
 #mainCard {
   margin: auto;
   width: 50vw;
-  margin-top: vh;
-  margin-bottom: 10px;
-  padding: 5px 5px 20px 5px;
-  background-color: lightgray;
+  max-width: 700px;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  padding: 10px 10px 20px 10px;
+  background-color: #D3D3D3;
+  box-shadow: 0 0 7px 3px blue;
 }
 #innerCard {
   margin: auto;
   width: 80%;
 }
-
 body {
   background-color: black;
 }
@@ -22,29 +23,23 @@ body {
   border-radius: 5px;
   margin-bottom: 15px;
 }
-
 #button-div {
   margin: auto;
   width: 35%;
   display: block;
 }
-
 #showMovies {
-  display: none;
+  /* display: none; */
 }
-
 .btn {
   background-color: white;
 }
-
-label {
-  color: white;
-}
 #switch {
+  display: none;
   margin: auto;
-  width: 25%;
+  width: 15%;
   display: block;
-  margin-top: 3vh;
+  margin-top: 2vh;
   margin-bottom: 5px;
 }
 #submit {
@@ -60,6 +55,7 @@ label {
 #userNameInput {
   margin: auto;
   width: 55vw;
+  max-width: 700px;
   text-align: center;
   display: block;
 }
@@ -73,5 +69,15 @@ label {
 #poster {
   margin: auto;
   width: 100%;
+  border: solid black 1px;  
   display: block;
 }
+#movieTitle {
+  text-align: center;
+}
+
+
+
+
+
+
