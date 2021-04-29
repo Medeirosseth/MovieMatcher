@@ -1,4 +1,4 @@
-export default class TrailerServive {
+export default class TrailerService {
   static getTrailerApi(movieJsonID) {
     return fetch(
       `http://api.themoviedb.org/3/movie/${movieJsonID}/videos?api_key=${process.env.API_KEY}`
@@ -14,10 +14,3 @@ export default class TrailerServive {
       });
   }
 }
-//response.results[0].id
-
-/// get response.results[0].id
-
-//movieIDResponse.results[0].key -- 2nd dealie
-
-//https://www.youtube.com/watch?v=${`movieIDResponse.results[0].key`}

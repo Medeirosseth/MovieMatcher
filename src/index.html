@@ -33,27 +33,29 @@
               <hr style="width: 75%" />
               <p class="card-text" id="movieOverview"></p>
               <div id="button-div">
-                <button id="no" class="btn btn-danger">No💔</button>
-                <button id="yes" class="btn btn-primary">Yes😎</button>
+                <button id="no" class="btn btn-outline-danger">No💔</button>
+                <button id="yes" class="btn btn-outline-success">Yes😎</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button id="switch" class="btn btn-warning">Switch User🤳🏽</button>
-    <button id="show-matches" class="btn btn-danger">Show Matches👑</button>
+    <button id="switch" class="btn btn-primary">Switch User🤳🏽</button>
+    <button id="show-matches" class="btn btn-primary">Show Matches👑</button>
   </div>
-  <h1 id="name-place"></h1>
-  <div id="showMoviesInCommon">
-    <iframe src="https://giphy.com/embed/3o6Ztl7RvfwCp9mqhW" width="480" height="360" frameBorder="0"
-      class="giphy-embed" allowFullScreen></iframe>
-    <p><a href="https://giphy.com/gifs/3o6Ztl7RvfwCp9mqhW"></a></p>
-    </p>
+
+  <div class="container" id="showMoviesInCommon">
+    <iframe id="gif" src="https://giphy.com/embed/3o6Ztl7RvfwCp9mqhW" frameBorder="0" class="giphy-embed"
+      allowFullScreen></iframe>
+    <h1 id="name-place"></h1>
+    <hr style="width: 30vw;" color="white">
     <ul id="ulMatches"></ul>
-    <p id="showGiphy"></p>
+    <hr style="width: 25%" color="white">
     <button type="click" class="btn btn-primary" id="returnButton">Return</button>
   </div>
 </body>
+
+
 
 </html>

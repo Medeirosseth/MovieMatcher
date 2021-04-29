@@ -2,10 +2,10 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
-import MovieService from "./js/api.js";
+import MovieService from "./js/movieInfo.js";
 import User from "./js/user.js";
 import TrailerService from "./js/trailerApi.js";
-import PopulateMovies from "./js/originalMovie.js";
+import PopulateMovies from "./js/movieGathering.js";
 
 let currentUser;
 
@@ -38,7 +38,6 @@ function returnMatches(user1, user2) {
   });
   return match;
 }
-
 
 function compareMovies(currentMovie, user1, user2) {
   if (currentUser.userID === 1) {
