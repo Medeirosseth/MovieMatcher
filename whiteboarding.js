@@ -1,3 +1,36 @@
+/Team Members
+
+//Project name/objective (MVP)
+// project overview (Seth)
+// andChill (Ryan, Giancarlo, Michael)
+// This will allow 2 users the chance to each choose which movies they would want to watch or not based on the most popular movies available for streaming. 
+// If they have both chosen the same movie they do want to watch, they will get a "Match" (yes, it's Tinder for movies) 
+// This will take out all of the guess-work in the debate about what to watch tonight.
+//
+// demo: (Ryan )
+//
+// process (Michael)
+// started with white boarding MVP and stretch goals 
+//( MVP changed over time do to further reading of what our api was able to do)
+// spent the beginning of monday all researching apis and discussed potential for each api 
+// didn't move forward on ideas without everyone's consent
+// initial MVP was to be able to match two users choices based on a movie list
+// further exploration of our api we were able to go based of hardcoded movies and used the api to call their movie poster 
+// then we had the arrays populated from the API 
+// we were then able to add trailers using a second API call 
+//
+// challenges (Giancarlo)
+// keeping eachothers' ideas in check on what was obtainable and what was a stretch goal 
+// merging conflicts (shared screen and merged files together to help ease anxiety)
+// any challenges a pair ran into we would get we would get the other pair to take a look 
+// getting a fresh pair of eyes on the problem was able to solve the problem quickly  
+//
+// overview
+// great teamwork 
+//
+//
+//
+
 //MVP
 // getting two users to match based on options chosen
 //Compile list of available streaming services
