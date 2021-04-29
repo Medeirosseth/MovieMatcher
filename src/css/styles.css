@@ -1,3 +1,6 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+}
 #mainCard {
   margin: auto;
   width: 50vw;
