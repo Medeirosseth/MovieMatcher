@@ -147,9 +147,9 @@ $(document).ready(function () {
     $("#showMovies").slideUp();
     $("#showMoviesInCommon").fadeIn();
   });
+
+  $("#returnButton").click(function () {
+    $("#showMoviesInCommon").fadeOut();
+    $("#showMovies").slideDown();
+  });
 });
-
-
-
-
-
