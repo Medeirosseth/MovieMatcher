@@ -1,8 +1,8 @@
-# Movie Matcher
+# :vhs::andChill:vhs:
 
-#### By: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
+#### By::neckbeard: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
 
-## Technologies Used
+## Technologies Used :computer:
 
 >* _Html_
 >* _CSS_
@@ -17,17 +17,17 @@
 >* _Family_
 
 
-## Description
+## Description :scroll:
 
 An app that shows a user a page which displays a bunch of movies information (movie poster, title, trailer, and description). The user can say "yes" or "no" to the movies, indicating whether or not they would like to watch said movies. Then another user will be presented with the same list of movies and can indicate whether or not they'd like to watch those movies (presumably with the first user). When matches are found an alert is given. At any time the second user can press a button that will display the list of movies that both users said "yes" to.
 
-## Setup/Installation Requirements
+## Setup/Installation Requirements 
 
 1. Open terminal 
 2. input these commands into command line:
 
 >* cd desktop
->* git clone https://github.com/RyanDanielWalker/MovieMatcher
+>* git clone https://github.com/Medeirosseth/mr-robogers-neighborhood.git
 >* cd MovieMatcher
 >* code .
 >* npm install
@@ -45,9 +45,9 @@ This should install the webpack and any other dependencies you need to use this 
 * run $npm run start
 This will open a live server for you to view the project.  
 
-## Known Bugs
+## Known Bugs :no_entry_sign: :bug:
 
->* _None - that we know of..._
+>* _None Known_
 ---
 ## License
 _Licensed under the [MIT License](LICENSE)._
