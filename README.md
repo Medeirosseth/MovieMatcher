@@ -2,8 +2,8 @@
 
 #### By::neckbeard: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
 
-## Technologies Used :computer:
-
+<details>
+  <summary>## Technologies Used :computer:</summary>
 >* _Html_
 >* _CSS_
 >* _JQuery_
@@ -16,6 +16,7 @@
 >* _APIs_
 >* _Family_
 
+<details>
 
 ## Description :scroll:
 
