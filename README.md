@@ -1,6 +1,6 @@
 # Movie Matcher
 
-#### By: Michael Burton, Ryan Walker, Seth Medeiros, Giancarlo Vigneri
+#### By: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
 
 ## Technologies Used
 
@@ -15,7 +15,7 @@
 >* _Babel_
 >* _APIs_
 >* _Family_
->* _Living your life a quarter mile at a time_
+
 
 ## Description
 
