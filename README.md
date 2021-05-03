@@ -4,17 +4,17 @@
 
 <details>
   <summary>## Technologies Used :computer:</summary>
->* _Html_
->* _CSS_
->* _JQuery_
->* _JavaScript_
->* _Node_
->* _Webpack_
->* _Jest_
->* _Eslint_
->* _Babel_
->* _APIs_
->* _Family_
+* _Html_>
+* _CSS_
+* _JQuery_
+* _JavaScript_
+* _Node_
+* _Webpack_
+* _Jest_
+* _Eslint_
+* _Babel_
+* _APIs_
+* _Family_
 
 </details>
 
