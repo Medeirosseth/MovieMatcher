@@ -1,4 +1,4 @@
-# :vhs::andChill:vhs:
+# :vhs:andChill:vhs:
 
 #### By::neckbeard: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
 
