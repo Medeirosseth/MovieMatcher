@@ -55,7 +55,7 @@ This will open a live server for you to view the project.
 _Licensed under the [MIT License](LICENSE)._
 
 ## Contact Information
+>:neckbeard:_Seth Medeiros at: Medeirosseth@gmail.com_
 >_Michael Burton at: micbur1@gmail.com_
->_Seth Medeiros at: Medeirosseth@gmail.com_
 >_Ryan Walker at: ryandanielwalker@gmail.com_
 >_Giancarlo Vigneri at: bobloblaw.vigneri@gmail.com_
