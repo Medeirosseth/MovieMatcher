@@ -16,7 +16,7 @@
 >* _APIs_
 >* _Family_
 
-<details>
+</details>
 
 ## Description :scroll:
 
