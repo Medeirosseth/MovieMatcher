@@ -4,7 +4,7 @@
 
 <details>
   <summary>## Technologies Used :computer:</summary>
-* _Html_>
+* _Html_
 * _CSS_
 * _JQuery_
 * _JavaScript_
