@@ -1,8 +1,5 @@
 # :vhs:andChill:vhs:
 
-#### By::neckbeard: Seth Medeiros Michael Burton, Ryan Walker, Giancarlo Vigneri
-
-
 >* _Html_
 >* _CSS_
 >* _JQuery_
